@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.springpj.user.repository.UserMapper">
+
+
+
+    <resultMap id="userMap" type="com.example.springpj.user.domain.User">
+        <result property="id" column="cs_id" />
+        <result property="name" column="cs_name" />
+        <result property="postalCode" column="postal_code" />
+    </resultMap>
+
+
+    <!-- // 회원 등록   -->
+    <insert id="createUser">
+        INSERT INTO cs_user
+        (cs_id, pw, cs_name, address, postal_code, phone, gender)
+        VALUES
+        (#{id}, #{pw}, #{name}, #{address}, #{postalCode}, #{phone}, #{gender})
+    </insert>
+
+    <!-- 회원 목록   -->
+    <select id="getList" resultMap="userMap">
+        SELECT * FROM cs_user
+    </select>
+
+
+
+</mapper>

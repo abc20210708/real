@@ -22,22 +22,23 @@ public class AdminService {
         return adminMapper.getList();
     }
 
-
     //회원 조회 중간 처리
     public List<User> getUserList() {
         return adminMapper.getUserList();
     }
 
-    //관리자 가입 중간 처리
+    //관리자 등록 중간처리
     public boolean write(Admin admin) {
-        log.info("회원 가입 중간 처리!");
+        log.info("관리자 등록 중간처리");
         return adminMapper.createAdmin(admin);
     }
 
-    //관리자 삭제
-    public boolean remove (String id, String pw) {
+    //관리자 삭제 중간처리
+    public boolean delete(String id, String pw) {
+        log.info("관리자 삭제 중간처리!");
         return adminMapper.deleteAdmin(id, pw);
     }
+
 
 
 

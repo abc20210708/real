@@ -21,18 +21,17 @@
 
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">아이디</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="아이디를 입력해주세요"
-                            name="id">
+                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="아이디를 입력해주세요" name="id">
                     </div>
                     <div class="mb-3">
                         <label for="exampleFormControlInput2" class="form-label">비밀번호</label>
-                        <input type="password" class="form-control" id="exampleFormControlInput2" placeholder="비밀번호를 입력해주세요"
-                            name="pw">
+                        <input type="password" class="form-control" id="exampleFormControlInput2" 
+                        placeholder="비밀번호를 입력해주세요" name="pw">
                     </div>
                     <div class="mb-3">
                         <label for="exampleFormControlInput2" class="form-label">관리자 권한</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="관리자 권한 (1 ~ 5)"
-                            name="grade">
+                        <input type="text" class="form-control" id="exampleFormControlInput2"
+                         placeholder="관리자 권한 (1 ~ 5)" name="grade">
                     </div>
                    
                        
@@ -43,7 +42,7 @@
 
 
                     <div class="d-grid gap-2">
-                        <button class="btn btn-dark" type="submit">가입하기</button>
+                        <button type="submit" class="btn btn-block btn-primary">관리자 등록</button>
                         <!-- <button id="to-list" class="btn btn-warning" type="button">목록으로</button> -->
                     </div>
 

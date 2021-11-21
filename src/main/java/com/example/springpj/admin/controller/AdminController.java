@@ -22,6 +22,34 @@ public class AdminController {
 
     private final AdminService adminService;
 
+    //관리자 등록 요청 - 화면
+    @GetMapping("/account")
+    public String write() {
+        log.info("관리자 등록 화면 요청! GET");
+        return "admin/account";
+    }
+
+    //관리자 등록 요청
+    @PostMapping("/account")
+    public String write(Admin admin) {
+        log.info("관리자 등록 ==> POST!" + admin);
+        return "redirect:/main/index";
+    }
+
+    //관리자 삭제 - 화면
+    @GetMapping("/delete")
+    public String delete() {
+        log.info("관리자 삭제 요청 화면! GET!");
+        return "admin/delete";
+    }
+
+    //관리자 삭제 - 화면
+    @PostMapping("/delete")
+    public String delete(String id, String pw) {
+        log.info("관리자 삭제 요청  ==> POST!!"+ id, pw);
+        return "redirect:/main/index";
+    }
+
 
     //관리자 전체 조회
     @GetMapping("/list")
@@ -30,21 +58,6 @@ public class AdminController {
         List<Admin> adminList = adminService.getList();
         model.addAttribute("admin",adminList);
         return "admin/list";
-    }
-
-    //관리자 가입 요청 - 화면
-    @GetMapping("/account")
-    public String write() {
-        log.info("관리자 가입 화면 요청! GET!");
-        return "admin/account";
-    }
-
-    //관리자 가입 요청
-    @PostMapping("/account")
-    public String write(Admin admin) {
-        log.info("관리자 가입 요청 ==> POST!" + admin);
-        adminService.write(admin);
-        return "redirect:/main/index";
     }
 
     //관리자가 회원을 조회
@@ -56,22 +69,6 @@ public class AdminController {
         return "admin/user-list";
     }
 
-
-
-    //삭제 요청 처리 - 화면!
-    @GetMapping("/delete")
-    public String delete() {
-        log.info("관리자 계정 삭제!! GET 화면요청!!");
-        return "admin/delete";
-    }
-
-    //삭제 요청 처리
-    @PostMapping("/delete")
-    public String delete(String id, String pw) {
-        log.info("관리자 계정 삭제!! => POST" + id, pw);
-        adminService.remove(id, pw);
-        return "redirect:/main/index";
-    }
 
 
 }//end class

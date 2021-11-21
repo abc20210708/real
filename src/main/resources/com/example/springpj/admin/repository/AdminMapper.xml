@@ -4,7 +4,17 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.example.springpj.admin.repository.AdminMapper">
-    
+
+    <insert id="createAdmin">
+        INSERT INTO service_admin VALUES
+        (#{id}, #{pw}, #{grade})
+    </insert>
+
+    <delete id="deleteAdmin">
+        DELETE FROM service_admin WHERE admin_id = #{id} AND admin_pw = #{pw}
+    </delete>
+
+
     <resultMap id="adminMap" type="com.example.springpj.admin.domain.Admin">
         <result property="id" column="admin_id" />
         <result property="pw" column="admin_pw" />
@@ -14,17 +24,6 @@
     <select id="getList" resultMap="adminMap">
         SELECT * FROM service_admin
     </select>
-    
-    <!--   관리자 등록-->
-    <insert id="createAdmin">
-        INSERT INTO service_admin VALUES (#{id},#{pw},#{grade})
-    </insert>
-
-
-    <!--  관리자 삭제   -->
-    <delete id="deleteAdmin">
-        DELETE FROM service_admin WHERE admin_id = #{id} AND admin_pw = #{pw}
-    </delete>
 
 
     <!--  회원 목록 조회    -->

@@ -20,8 +20,8 @@
                    
 
                     <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">아이디(이메일)</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="이메일을 입력해주세요"
+                        <label for="exampleFormControlInput1" class="form-label">아이디</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="아이디를 입력해주세요"
                             name="id">
                     </div>
                     <div class="mb-3">

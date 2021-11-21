@@ -1,6 +1,7 @@
 package com.example.springpj.admin.repository;
 
 import com.example.springpj.admin.domain.Admin;
+import com.example.springpj.user.domain.User;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
@@ -10,6 +11,9 @@ public interface AdminMapper {
 
     //관리자 목록
     List<Admin> getList();
+
+    //회원 목록 조회하기
+    List<User> getUserList();
 
     //관리자 가입하기
     boolean createAdmin(Admin admin);

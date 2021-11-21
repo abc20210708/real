@@ -22,12 +22,10 @@
         (#{id}, #{pw}, #{name}, #{address}, #{postalCode}, #{phone}, #{gender})
     </insert>
 
-    <!-- 회원 목록   -->
-    <select id="getList" resultMap="userMap">
-        SELECT * FROM cs_user
-    </select>
-
-
+    <!-- 회원 탈퇴  -->
+    <delete id="deleteUser">
+        DELETE FROM cs_user WHERE cs_id = #{id} AND pw = #{pw}
+    </delete>
 
 
 </mapper>

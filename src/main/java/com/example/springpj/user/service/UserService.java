@@ -17,10 +17,7 @@ public class UserService {
 
     private final UserMapper userMapper;
 
-    //회원 조회 중간 처리
-    public List<User> getList() {
-        return userMapper.getList();
-    }
+
 
     //회원 가입 중간 처리
     public boolean write(User user) {

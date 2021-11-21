@@ -2,6 +2,7 @@ package com.example.springpj.admin.service;
 
 import com.example.springpj.admin.domain.Admin;
 import com.example.springpj.admin.repository.AdminMapper;
+import com.example.springpj.user.domain.User;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
@@ -22,9 +23,14 @@ public class AdminService {
         return adminMapper.getList();
     }
 
-    //회원 가입 중간 처리
+    //관리자 가입 중간 처리
     public boolean write(Admin admin) {
         return adminMapper.createAdmin(admin);
+    }
+
+    //회원 조회 중간 처리
+    public List<User> getUserList() {
+        return adminMapper.getUserList();
     }
 
     //관리자 삭제

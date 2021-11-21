@@ -25,14 +25,7 @@ public class UserController {
 
 
 
-    //회원 전제 초회
-    @GetMapping("/list")
-    public String list(Model model) {
-        log.info ("회원 전체 조회 GET!");
-        List<User> csUserList = userService.getList();
-        model.addAttribute("cs",csUserList);
-        return "user/list";
-    }
+
 
     //회원 가입 요청 - 화면
     @GetMapping("/account")
@@ -49,10 +42,17 @@ public class UserController {
         return "redirect:/main/index";
     }
 
-    //회원 탈퇴 요청
+    //회원 탈퇴 - 화면 요청
     @GetMapping("/delete")
-    public String delete(String id, String pw) {
+    public String delete() {
         log.info("회원 탈퇴 요청! GET!");
+        return "user/delete";
+    }
+
+    //회원 탈퇴
+    @PostMapping("/delete")
+    public String delete(String id, String pw) {
+        log.info("회원 탈퇴 요청 ==> POST" + id, pw);
         userService.delete(id, pw);
         return "redirect:/main/index";
     }

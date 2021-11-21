@@ -41,5 +41,8 @@
 
                                     <button type="submit" class="btn btn-block btn-primary">관리자 삭제</button>
                                 </div>
+                            </div>
+                            </form>
+                        </div>
                                 <!-- End of Form -->
                                 <!-- Form -->

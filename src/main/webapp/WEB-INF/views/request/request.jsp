@@ -199,20 +199,20 @@
                                     </div>
                                 </div>
                             </div>
-                            <form action="/request" method="post" class="col-12 col-md-8 mx-auto">
+                            <form action="/request/request" method="post" class="col-12 col-md-8 mx-auto">
                                 <!-- Form -->
                                 <div class="form-group">
                                     <label class="my-1 mr-2" for="inlineFormCustomSelectPref">제품명(제품코드)</label>
-                                    <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                                    <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref" name="productName">
                                         <option selected>선택하세요...</option>
-                                        <option value="TV">TV</option>
-                                        <option value="냉장고">냉장고</option>
-                                        <option value="세탁기">세탁기</option>
-                                        <option value="정수기">정수기</option>
-                                        <option value="에어컨">에어컨</option>
-                                        <option value="노크북">노트북</option>
-                                        <option value="카메라">카메라</option>
-                                        <option value="핸드폰">핸드폰</option>
+                                        <option value="TV"  <c:if test="${productName eq 'TV'}">selected</c:if>> TV</option>
+                                        <option value="냉장고"  <c:if test="${productName eq '냉장고'}">selected</c:if>>냉장고</option>
+                                        <option value="세탁기"  <c:if test="${productName eq '세탁기'}">selected</c:if>>세탁기</option>
+                                        <option value="정수기"  <c:if test="${productName eq '정수기'}">selected</c:if>>정수기</option>
+                                        <option value="에어컨"  <c:if test="${productName eq '에어컨'}">selected</c:if>>에어컨</option>
+                                        <option value="노트북"  <c:if test="${productName eq '노트북'}">selected</c:if>>노트북</option>
+                                        <option value="카메라"  <c:if test="${productName eq '카메라'}">selected</c:if>>카메라</option>
+                                        <option value="핸드폰" <c:if test="${productName eq '핸드폰'}">selected</c:if>> 핸드폰</option>
                                     </select>
                                 </div>
                                 <!-- Form -->
@@ -221,19 +221,19 @@
                                         <!-- Form -->
                                         <div class="form-group">
                                             <label for="validationServer01">신청자</label>
-                                            <input type="text" class="form-control is-valid" id="validationServer01" value="csId" 
-                                            placeholder="마지막가입유저"  required>
+                                            <input type="text" class="form-control is-valid" id="validationServer01"
+                                            placeholder="마지막가입유저"  name="csId" required>
                                         </div>
                                     </div>
                                     <div class="col-lg-4 col-sm-6">
                                         <!-- Form -->
                                         <div class="form-group">
                                             <label for="validationServer01">수량</label>
-                                            <select class="custom-select mr-sm-2" id="inlineFormCustomSelectPref">
+                                            <select class="custom-select mr-sm-2" id="inlineFormCustomSelectPref" name="amount">
                                                 <option selected>선택하세요...</option>
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
+                                                <option value="1" <c:if test="${amount eq '1'}">selected</c:if>> 1</option>
+                                                <option value="2" <c:if test="${amount eq '2'}">selected</c:if>> 2</option>
+                                                <option value="3" <c:if test="${amount eq '3'}">selected</c:if>> 3</option>
                                             </select>            
                                         </div>
                                     </div>
@@ -241,11 +241,11 @@
                                         <!-- Form -->
                                         <div class="form-group">
                                             <label for="validationServer01">방식</label>
-                                            <select class="custom-select mr-sm-2" id="inlineFormCustomSelectPref">
+                                            <select class="custom-select mr-sm-2" id="inlineFormCustomSelectPref" name="asChoice" >
                                                 <option selected>선택하세요...</option>
-                                                <option value="출장">출장</option>
-                                                <option value="2">방문</option>
-                                                <option value="3">배송</option>
+                                                <option value="출장" <c:if test="${asChoice eq '출장'}">selected</c:if>>출장</option>
+                                                <option value="방문" <c:if test="${asChoice eq '방문'}">selected</c:if>> 방문</option>
+                                                <option value="배송" <c:if test="${asChoice eq '배송'}">selected</c:if>>배송</option>
                                             </select>            
                                         </div>
                                     </div>
@@ -253,7 +253,10 @@
                                 <!-- Form -->
                                 <div class="form-group">
                                     <label for="exampleFormControlTextarea2">세부 증상</label>
-                                    <textarea class="form-control" placeholder="전달 사항이 구체적일수록 수리 기간의 단축에 도움이 될 수 있습니다." id="exampleFormControlTextarea2" rows="4"></textarea>
+                                    <textarea class="form-control"
+                                     placeholder="전달 사항이 구체적일수록 수리 기간의 단축에 도움이 될 수 있습니다."
+                                      id="exampleFormControlTextarea2" 
+                                      rows="4" name="asComment"></textarea>
                                 </div>
                                 <!-- End of Form -->
                                 <div class="alert-danger">
@@ -267,7 +270,7 @@
                             </form>
                             
                             <div class="card-footer px-0 mx-auto">
-                                <button type="submit" class="btn btn-primary">A/S 신청</button>
+                                <button type="submit" id="submitBtn" class="btn btn-primary">A/S 신청</button>
                             </div>
                         </div>
                         <!-- End of Contact Card -->
@@ -363,5 +366,19 @@
             </div>
         </div>
     </footer>
+
+    <script>
+
+                //신청 버튼
+                const $submitBtn = document.getElementById('submitBtn');
+
+                $submitBtn.onclick = e => {
+                    location.href = '/main/index';
+                };
+
+    </script>
+
+
+
 </body>
 </html>

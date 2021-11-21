@@ -17,8 +17,6 @@ public class UserService {
 
     private final UserMapper userMapper;
 
-
-
     //회원 가입 중간 처리
     public boolean write(User user) {
         return userMapper.createUser(user);

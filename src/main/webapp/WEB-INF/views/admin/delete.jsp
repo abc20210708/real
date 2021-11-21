@@ -9,7 +9,7 @@
             <div class="col-12 col-md-8 col-lg-6 justify-content-center">
                 <div class="card bg-primary shadow-soft border-light p-4">
                     <div class="card-header text-center pb-0">
-                        <h2 class="mb-0 h5">관리자 계정 삭제</h2>                               
+                        <h2 class="mb-0 h5">관리자 삭제</h2>                               
                     </div>
                     <div class="card-body">
                         <form action="/admin/delete" method="post">
@@ -39,8 +39,7 @@
                                          required>
                                     </div>
 
-                                    <button type="submit" class="btn btn-block btn-primary">관리자 계정 삭제</button>
+                                    <button type="submit" class="btn btn-block btn-primary">관리자 삭제</button>
                                 </div>
-                            </form>
                                 <!-- End of Form -->
                                 <!-- Form -->

@@ -17,17 +17,13 @@
     
     <!--   관리자 등록-->
     <insert id="createAdmin">
-        INSERT INTO service_admin
-        VALUES
-        ( #{id}, #{pw}, #{grade})
+        INSERT INTO service_admin VALUES (#{id},#{pw},#{grade})
     </insert>
 
 
     <!--  관리자 삭제   -->
     <delete id="deleteAdmin">
-        DELETE FROM service_admin
-        WHERE admin_id = #{id}
-        AND admin_pw = #{pw}
+        DELETE FROM service_admin WHERE admin_id = #{id} AND admin_pw = #{pw}
     </delete>
 
 

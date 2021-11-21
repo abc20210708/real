@@ -4,6 +4,7 @@ import com.example.springpj.admin.domain.Admin;
 import com.example.springpj.admin.service.AdminService;
 import com.example.springpj.user.domain.User;
 import lombok.Getter;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,13 +17,11 @@ import java.util.List;
 @Controller
 @Log4j2
 @RequestMapping("/admin")
+@RequiredArgsConstructor
 public class AdminController {
 
     private final AdminService adminService;
 
-    public AdminController(AdminService adminService) {
-        this.adminService = adminService;
-    }
 
     //관리자 전체 조회
     @GetMapping("/list")
@@ -59,11 +58,10 @@ public class AdminController {
 
 
 
-
-    //삭제 요청 처리
+    //삭제 요청 처리 - 화면!
     @GetMapping("/delete")
     public String delete() {
-        log.info("관리자 계정 삭제!! 화면요청!!");
+        log.info("관리자 계정 삭제!! GET 화면요청!!");
         return "admin/delete";
     }
 

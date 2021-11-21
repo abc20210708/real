@@ -8,17 +8,28 @@
 <head>
     <div class="wrap">
 
-        <div class="btn-group btn-group-lg custom-btn-group" role="group" >
+        <div class="btn-group btn-group-lg custom-btn-group" role="group">
 
-<!-- <button id="list" type="button" class="btn btn-dark">목록</button> -->
+
+
+
+            <!-- <button id="list" type="button" class="btn btn-dark">목록</button> -->
             <c:forEach var="ad" items="${admin}">
-               
-                  <p>${ad.id}</p>
-                  <p>${ad.pw}</p>
-                  <p>${ad.grade}</p>
-                  
-                  
-               
+
+
+
+
+                <p id="content">${ad.id}</p>
+                <p>${ad.pw}</p>
+                <p>${ad.name}</p>
+                <p>${ad.address}</p>
+                <p>${ad.pastalCode}</p>
+                <p>${ad.phone}</p>
+                <p>${ad.grade}</p>
+                <p>${ad.gender}</p>
+
+
+
             </c:forEach>
 
 
@@ -31,3 +42,7 @@
 
 
     </div>
+
+    <script>
+        //상세보기 요청 이벤트
+    </script>

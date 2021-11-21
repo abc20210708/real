@@ -15,13 +15,11 @@ public interface AdminMapper {
     //회원 목록 조회하기
     List<User> getUserList();
 
-    //관리자 가입하기
+    //관리자 등록하기
     boolean createAdmin(Admin admin);
 
     //관리자 삭제
     boolean deleteAdmin(String id, String pw);
 
-    //관리자 정보 수정
-    boolean modifyAdmin(String pw, int grade);
 
 }//end class

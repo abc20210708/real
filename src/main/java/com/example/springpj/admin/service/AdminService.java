@@ -34,8 +34,10 @@ public class AdminService {
     }
 
     //관리자 삭제
-    @GetMapping("/delete")
-    public void remove (String id, String pw) {
-        adminMapper.deleteAdmin(id, pw);
+    public boolean remove (String id, String pw) {
+        return adminMapper.deleteAdmin(id, pw);
     }
+
+
+
 }//end class

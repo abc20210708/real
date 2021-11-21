@@ -145,7 +145,7 @@
                         <h1 class="display-2 mb-4">We are ISEC A/S</h1>
                         <p class="lead">직접 해결하는 방법을 알려드리고 서비스 및 제품에 대한 궁금증을 상담해드립니다.</p>
                         <p class="lead mb-5">제품별 사용설명서 및 관리에 대한 팁을 알려드리고 제품 고장시 출장/방문 예약부터 부품교체 및 하자 수리까지 도와드립니다.</p>
-                        <a class="btn text-secondary btn-primary" href="#"><span class="fas fa-tools text-secondary mr-2"></span>A/S 신청</a></div>
+                        <a class="btn text-secondary btn-primary" href="/request/request"><span class="fas fa-tools text-secondary mr-2"></span>A/S 신청</a></div>
                 </div>
             </div>        
         </div>

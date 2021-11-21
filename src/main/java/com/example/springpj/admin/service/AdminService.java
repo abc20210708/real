@@ -23,14 +23,15 @@ public class AdminService {
         return adminMapper.getList();
     }
 
-    //관리자 가입 중간 처리
-    public boolean write(Admin admin) {
-        return adminMapper.createAdmin(admin);
-    }
 
     //회원 조회 중간 처리
     public List<User> getUserList() {
         return adminMapper.getUserList();
+    }
+
+    //관리자 가입 중간 처리
+    public boolean write(Admin admin) {
+        return adminMapper.createAdmin(admin);
     }
 
     //관리자 삭제

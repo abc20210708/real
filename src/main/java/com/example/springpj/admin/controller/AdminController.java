@@ -40,6 +40,14 @@ public class AdminController {
         return "admin/account";
     }
 
+    //관리자 가입 요청
+    @PostMapping("/account")
+    public String write(Admin admin) {
+        log.info("관리자 가입 요청 ==> POST!" + admin);
+        adminService.write(admin);
+        return "redirect:/main/index";
+    }
+
     //관리자가 회원을 조회
     @GetMapping("/user-list")
     public String userList(Model model) {
@@ -50,13 +58,7 @@ public class AdminController {
     }
 
 
-    //관리자 가입 요청 - 화면
-    @PostMapping("/account")
-    public String write(Admin admin) {
-        log.info("관리자 가입 요청 ==> POST!" + admin);
-        adminService.write(admin);
-        return "redirect:/main/index";
-    }
+
 
     //삭제 요청 처리
     @GetMapping("/delete")

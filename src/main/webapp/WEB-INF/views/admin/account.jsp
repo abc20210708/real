@@ -9,7 +9,7 @@
             <div class="col-12 col-md-8 col-lg-6 justify-content-center">
                 <div class="card bg-primary shadow-soft border-light p-4">
                     <div class="card-header text-center pb-0">
-                        <h2 class="mb-0 h5">회원가입</h2>                               
+                        <h2 class="mb-0 h5">관리자 등록</h2>                               
                     </div>
                     <div class="card-body">
                         <form action="/admin/account" method="post">
@@ -38,8 +38,20 @@
                                          name="pw"
                                          required>
                                     </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword7">관리자 등급</label>
+                                        <div class="input-group mb-4">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><span class="fas fa-unlock-alt"></span></span>
+                                            </div>
+                                            <input class="form-control" 
+                                             placeholder="등급" type="text" 
+                                             name="grade"
+                                             required>
+                                        </div>
 
-                                    <button type="submit" class="btn btn-block btn-primary">회원가입</button>
+                                    <button type="submit" class="btn btn-block btn-primary">관리자 등록하기</button>
                                 </div>
+                            </form>
                                 <!-- End of Form -->
                                 <!-- Form -->

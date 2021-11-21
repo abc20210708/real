@@ -18,8 +18,8 @@
     <!--   관리자 등록-->
     <insert id="createAdmin">
         INSERT INTO service_admin
-            VALUES
-            ( #{id}, #{pw}, #{grade})
+        VALUES
+        ( #{id}, #{pw}, #{grade})
     </insert>
 
 

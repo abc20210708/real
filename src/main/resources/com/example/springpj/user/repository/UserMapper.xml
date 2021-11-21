@@ -7,12 +7,6 @@
 
 
 
-    <resultMap id="userMap" type="com.example.springpj.user.domain.User">
-        <result property="id" column="cs_id" />
-        <result property="name" column="cs_name" />
-        <result property="postalCode" column="postal_code" />
-    </resultMap>
-
 
     <!-- // 회원 등록   -->
     <insert id="createUser">

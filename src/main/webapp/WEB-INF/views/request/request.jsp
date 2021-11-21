@@ -1,5 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -203,7 +204,7 @@
                                 <!-- Form -->
                                 <div class="form-group">
                                     <label class="my-1 mr-2" for="inlineFormCustomSelectPref">제품명(제품코드)</label>
-                                    <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref" name="productName">
+                                    <select  class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref" name="productName">
                                         <option selected>선택하세요...</option>
                                         <option value="TV"  <c:if test="${productName eq 'TV'}">selected</c:if>> TV</option>
                                         <option value="냉장고"  <c:if test="${productName eq '냉장고'}">selected</c:if>>냉장고</option>
@@ -229,7 +230,7 @@
                                         <!-- Form -->
                                         <div class="form-group">
                                             <label for="validationServer01">수량</label>
-                                            <select class="custom-select mr-sm-2" id="inlineFormCustomSelectPref" name="amount">
+                                            <select  class="custom-select mr-sm-2" id="inlineFormCustomSelectPref" name="amount">
                                                 <option selected>선택하세요...</option>
                                                 <option value="1" <c:if test="${amount eq '1'}">selected</c:if>> 1</option>
                                                 <option value="2" <c:if test="${amount eq '2'}">selected</c:if>> 2</option>
@@ -241,10 +242,10 @@
                                         <!-- Form -->
                                         <div class="form-group">
                                             <label for="validationServer01">방식</label>
-                                            <select class="custom-select mr-sm-2" id="inlineFormCustomSelectPref" name="asChoice" >
+                                            <select  class="custom-select mr-sm-2" id="inlineFormCustomSelectPref" name="asChoice" >
                                                 <option selected>선택하세요...</option>
                                                 <option value="출장" <c:if test="${asChoice eq '출장'}">selected</c:if>>출장</option>
-                                                <option value="방문" <c:if test="${asChoice eq '방문'}">selected</c:if>> 방문</option>
+                                                <option value="방문" <c:if test="${asChoice eq '방문'}">selected</c:if>>방문</option>
                                                 <option value="배송" <c:if test="${asChoice eq '배송'}">selected</c:if>>배송</option>
                                             </select>            
                                         </div>
@@ -375,6 +376,9 @@
                 $submitBtn.onclick = e => {
                     location.href = '/main/index';
                 };
+
+
+              
 
     </script>
 

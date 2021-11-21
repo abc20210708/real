@@ -2,6 +2,7 @@ package com.example.springpj.admin.controller;
 
 import com.example.springpj.admin.domain.Admin;
 import com.example.springpj.admin.service.AdminService;
+import com.example.springpj.request.domain.Request;
 import com.example.springpj.user.domain.User;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
@@ -67,6 +68,15 @@ public class AdminController {
         List<User> csUserList = adminService.getUserList();
         model.addAttribute("cs",csUserList);
         return "admin/user-list";
+    }
+
+    //관리자 AS 목록
+    @GetMapping("/request-list")
+    public String Requestlist(Model model) {
+        log.info("관리자 AS 조회 GET!");
+        List<Request> requestList = adminService.getRequestList();
+        model.addAttribute("req",requestList);
+        return "admin/request-list";
     }
 
 

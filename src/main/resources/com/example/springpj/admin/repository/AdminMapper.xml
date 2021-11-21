@@ -37,6 +37,19 @@
         SELECT * FROM cs_user
     </select>
 
+    <resultMap id="requestMap" type="com.example.springpj.request.domain.Request">
+        <result property="asNum" column="as_num" />
+        <result property="cdId" column="cd_id" />
+        <result property="productName" column="product_name" />
+        <result property="asChoice" column="as_choice" />
+        <result property="asComment" column="as_comment" />
+        <result property="asDate" column="as_date" />
+    </resultMap>
+
+    <!-- AS 목록 조회   -->
+    <select id="GetRequestList" resultMap="requestMap">
+        SELECT * FROM service_admin
+    </select>
 
   
     

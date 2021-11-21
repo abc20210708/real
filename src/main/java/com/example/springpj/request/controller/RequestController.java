@@ -6,9 +6,7 @@ import lombok.extern.log4j.Log4j2;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 @Log4j2
@@ -21,6 +19,8 @@ public class RequestController {
         this.requestService = requestService;
     }
 
+
+
     //AS 신청 요청 - 화면
     @GetMapping("/request")
     public String write() {
@@ -31,10 +31,12 @@ public class RequestController {
     //AS 신청 요청
     @PostMapping("/request")
     public String write(Request request) {
-        log.info("AS 신청 요청! ==> POST!");
+        log.info("AS 신청 요청! ==> POST!" + request);
         requestService.write(request);
         return  "redirect:/main/index";
     }
+
+
 
 
 }//end class

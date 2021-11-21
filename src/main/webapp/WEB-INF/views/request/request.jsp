@@ -199,20 +199,20 @@
                                     </div>
                                 </div>
                             </div>
-                            <form action="#" method="post" class="col-12 col-md-8 mx-auto">
+                            <form action="/request" method="post" class="col-12 col-md-8 mx-auto">
                                 <!-- Form -->
                                 <div class="form-group">
                                     <label class="my-1 mr-2" for="inlineFormCustomSelectPref">제품명(제품코드)</label>
                                     <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
                                         <option selected>선택하세요...</option>
                                         <option value="TV">TV</option>
-                                        <option value="refrigerator">냉장고</option>
-                                        <option value="washing machine">세탁기</option>
-                                        <option value="water purifier">정수기</option>
-                                        <option value="air conditioner">에어컨</option>
-                                        <option value="notebook">노트북</option>
-                                        <option value="camera">카메라</option>
-                                        <option value="phone">핸드폰</option>
+                                        <option value="냉장고">냉장고</option>
+                                        <option value="세탁기">세탁기</option>
+                                        <option value="정수기">정수기</option>
+                                        <option value="에어컨">에어컨</option>
+                                        <option value="노크북">노트북</option>
+                                        <option value="카메라">카메라</option>
+                                        <option value="핸드폰">핸드폰</option>
                                     </select>
                                 </div>
                                 <!-- Form -->
@@ -221,7 +221,8 @@
                                         <!-- Form -->
                                         <div class="form-group">
                                             <label for="validationServer01">신청자</label>
-                                            <input type="text" class="form-control is-valid" id="validationServer01" value="마지막가입유저" required>
+                                            <input type="text" class="form-control is-valid" id="validationServer01" value="csId" 
+                                            placeholder="마지막가입유저"  required>
                                         </div>
                                     </div>
                                     <div class="col-lg-4 col-sm-6">
@@ -242,7 +243,7 @@
                                             <label for="validationServer01">방식</label>
                                             <select class="custom-select mr-sm-2" id="inlineFormCustomSelectPref">
                                                 <option selected>선택하세요...</option>
-                                                <option value="1">출장</option>
+                                                <option value="출장">출장</option>
                                                 <option value="2">방문</option>
                                                 <option value="3">배송</option>
                                             </select>            

@@ -25,7 +25,6 @@ public class UserService {
     }
 
     //회원 탈퇴 요청 처리
-    @GetMapping("/delete")
     public boolean delete(String id, String pw) {
         return userMapper.deleteUser(id, pw);
     }

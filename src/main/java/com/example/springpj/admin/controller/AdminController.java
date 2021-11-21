@@ -68,7 +68,7 @@ public class AdminController {
     //삭제 요청 처리
     @PostMapping("/delete")
     public String delete(String id, String pw) {
-        log.info("관리자 계정 삭제!!" + id, pw);
+        log.info("관리자 계정 삭제!! => POST" + id, pw);
         adminService.remove(id, pw);
         return "redirect:/main/index";
     }

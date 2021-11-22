@@ -28,7 +28,7 @@ public interface AdminMapper {
     List<Request> getRequestList();
 
     //회원 목록 상세조회
-    User getUserContent(String csId);
+    User getUserContent(int csNum);
 
     //AS 목록 상세조회
     Request getRequestContent(String asNum);

@@ -8,17 +8,17 @@
 
     <div class="content-container">
 
-        <h1 class="main-title">${user.csId}님의 회원정보</h1>
+        <h1 class="main-title">${user.id}님의 회원정보</h1>
 
         <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">회원아이디</label>
             <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="이름" name="writer"
-                value="${user.csId}" disabled>
+                value="${user.id}" disabled>
         </div>
         <div class="mb-3">
             <label for="exampleFormControlInput2" class="form-label">회원 이름</label>
             <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="제목" name="title"
-                value="${user.csName}" disabled>
+                value="${user.name}" disabled>
         </div>
         <div class="mb-3">
             <label for="exampleFormControlInput2" class="form-label">주소</label>
@@ -38,7 +38,7 @@
         <div class="mb-3">
             <label for="exampleFormControlInput2" class="form-label">성별</label>
             <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="제목" name="title"
-                value="${user.grade}" disabled>  
+                value="${user.gender}" disabled>  
         </div>
         
 

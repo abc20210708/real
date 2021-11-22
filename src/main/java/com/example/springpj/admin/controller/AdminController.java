@@ -68,11 +68,11 @@ public class AdminController {
     }
 
     //상세 조회 요청
-    //admin/user/content?csId=aaa123@naver.com
+    //admin/user/content?csNum=3
     @GetMapping("/user/content")
-    public String userContent(String csId, Model model) {
-        log.info("회원 상세 목록 조회!! GET!!" + csId);
-        User user = adminService.getUserContent(csId);
+    public String userContent(int csNum, Model model) {
+        log.info("회원 상세 목록 조회!! GET!!" + csNum);
+        User user = adminService.getUserContent(csNum);
         model.addAttribute("user",user);
         return "admin/user-content";
     }

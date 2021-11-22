@@ -174,6 +174,7 @@
                                                 <th class="border-0" scope="col">연락처</th>
                                                 <th class="border-0" scope="col">성별</th>
                                             </tr>
+
                                             <c:forEach var="cs" items="${cs}">  
                                                 <tr class="text-center">
                                                     <th scope="col">${cs.csNum}</th>
@@ -331,14 +332,14 @@
              //상세보기 요청 이벤트
             const $table = document.querySelector(".articles");
             $table.addEventListener('click', e => {
-                if (!e.target.matches('.articles td')) return;
+                if (!e.target.matches('.articles th')) return;
 
-                //console.log('tr 클릭됨! - ', e.target);
+                console.log('클릭됨! - ', e.target);
 
-                let id = e.target.parentElement.firstElementChild.nextsibling.textContent;
-                console.log('회원아이디: ' + id);
+                let bn = e.target.parentElement.firstElementChild.textContent;
+                console.log('회원아이디: ' + bn);
 
-                location.href = '/admin/user/content?csId=' + id;
+                location.href = '/admin/user/content?csNum=' + bn;
             });
 
     </script>

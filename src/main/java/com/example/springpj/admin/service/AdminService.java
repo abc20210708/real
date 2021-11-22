@@ -56,6 +56,12 @@ public class AdminService {
         return adminMapper.getUserContent(csNum);
     }
 
+    //AS 상세 조회 중간 처리
+    public Request getRequestContent(int asNum) {
+        log.info("회원 상세 조회 중간 처리! " +asNum);
+        return adminMapper.getRequestContent(asNum);
+    }
+
 
 
 

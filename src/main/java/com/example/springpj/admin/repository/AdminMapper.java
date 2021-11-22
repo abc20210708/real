@@ -31,5 +31,5 @@ public interface AdminMapper {
     User getUserContent(int csNum);
 
     //AS 목록 상세조회
-    Request getRequestContent(String asNum);
+    Request getRequestContent(int asNum);
 }//

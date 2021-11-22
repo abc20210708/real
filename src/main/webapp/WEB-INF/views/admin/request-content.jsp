@@ -8,25 +8,37 @@
 
     <div class="content-container">
 
-        <h1 class="main-title">${b.boardNo}번 게시물</h1>
+        <h1 class="main-title">${req.boardNo}번 신청 세부사항</h1>
 
         <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">작성자</label>
+            <label for="exampleFormControlInput1" class="form-label">회원아이디</label>
             <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="이름" name="writer"
-                value="${b.writer}" disabled>
+                value="${req.csId}" disabled>
         </div>
         <div class="mb-3">
-            <label for="exampleFormControlInput2" class="form-label">글제목</label>
+            <label for="exampleFormControlInput2" class="form-label">제품명</label>
             <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="제목" name="title"
-                value="${b.title}" disabled>
+                value="${req.productName}" disabled>
         </div>
         <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label">내용</label>
-
-            <p class="main-content">
-                ${b.content}
-            </p>
-
+            <label for="exampleFormControlInput2" class="form-label">수량</label>
+            <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="제목" name="title"
+                value="${req.amount}" disabled>
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput2" class="form-label">방문선택</label>
+            <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="제목" name="title"
+                value="${req.asChoice}" disabled>
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput2" class="form-label">문제점</label>
+            <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="제목" name="title"
+                value="${req.asComment}" disabled>
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput2" class="form-label">신청날짜</label>
+            <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="제목" name="title"
+                value="${req.asDate}" disabled>
         </div>
 
         <div class="bottom-group">

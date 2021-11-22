@@ -67,7 +67,7 @@ public class AdminController {
         return "redirect:/main/index";
     }
 
-    //상세 조회 요청
+    //회원 상세 조회 요청
     //admin/user/content?csNum=3
     @GetMapping("/user/content")
     public String userContent(int csNum, Model model) {
@@ -76,6 +76,17 @@ public class AdminController {
         model.addAttribute("user",user);
         return "admin/user-content";
     }
+
+    //상세 조회 요청
+    //admin/user/content?csNum=3
+    @GetMapping("/request/content")
+    public String requestContent(int asNum, Model model) {
+        log.info("회원 상세 목록 조회!! GET!!" + asNum);
+        Request request =  adminService.getRequestContent(asNum);
+        model.addAttribute("req",request);
+        return "admin/request-content";
+    }
+
 
 
 

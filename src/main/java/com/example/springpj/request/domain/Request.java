@@ -12,7 +12,7 @@ import java.sql.SQLException;
 @NoArgsConstructor
 public class Request {
 
-    private String asNum;       //접수번호
+    private int asNum;       //접수번호
     private String csId;        //회원 아이디
     private String productName; //제품명
     private int amount;         //수량
@@ -20,7 +20,7 @@ public class Request {
     private String asComment;   //세부사항
     private String asDate;      //접수날짜
 
-    public Request(String asNum, String csId,
+    public Request(int asNum, String csId,
                    String productName, int amount,
                    String asChoice, String asComment,
                    String asDate) {
@@ -34,7 +34,7 @@ public class Request {
     }
 
     public Request(ResultSet rs) throws SQLException {
-        this.asNum = rs.getString("as_num");
+        this.asNum = rs.getInt("as_num");
         this.csId = rs.getString("cs_id");
         this.productName = rs.getString("product_name");
         this.amount = rs.getInt("amount");

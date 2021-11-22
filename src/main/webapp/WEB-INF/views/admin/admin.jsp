@@ -187,7 +187,7 @@
                                         </table>
                                     </div>
                                     <div class="tab-pane fade" id="tabs-text-2" role="tabpanel" aria-labelledby="tabs-text-2-tab">
-                                        <table class="table shadow-soft rounded">
+                                        <table class="table shadow-soft rounded articles2">
                                             <tr class="text-center text-info">
                                                 <th class="border-0" scope="col">신청코드</th>
                                                 <th class="border-0" scope="col">제품명</th>
@@ -329,7 +329,7 @@
             };
 
 
-             //상세보기 요청 이벤트
+             //회원 상세보기 요청 이벤트
             const $table = document.querySelector(".articles");
             $table.addEventListener('click', e => {
                 if (!e.target.matches('.articles th')) return;
@@ -337,9 +337,24 @@
                 console.log('클릭됨! - ', e.target);
 
                 let bn = e.target.parentElement.firstElementChild.textContent;
-                console.log('회원아이디: ' + bn);
+                console.log('글번호: ' + bn);
 
                 location.href = '/admin/user/content?csNum=' + bn;
+            });
+
+
+            
+             //AS 상세보기 요청 이벤트
+             const $table = document.querySelector(".articles2");
+            $table.addEventListener('click', e => {
+                if (!e.target.matches('.articles th')) return;
+
+                console.log('클릭됨! - ', e.target);
+
+                let bn2 = e.target.parentElement.firstElementChild.textContent;
+                console.log(':글번호 ' + bn2);
+
+                location.href = '/admin/request/content?asNum=' + bn2;
             });
 
     </script>

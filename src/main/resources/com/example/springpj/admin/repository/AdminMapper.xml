@@ -57,11 +57,15 @@
     </select>
 
 
+    <!-- 회원 목록 상세 조회   -->
     <select id="getUserContent" resultMap="userMap">
         SELECT * FROM cs_user WHERE cs_num = #{csNum}
     </select>
 
-
+    <!-- AS 목록  상세 조회   -->
+    <select id="getRequestContent" resultMap="requestMap">
+        SELECT * FROM as_apply WHERE as_num = #{asNum}
+    </select>
 
 
 </mapper>

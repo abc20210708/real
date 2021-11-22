@@ -2,47 +2,64 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
- <!-- Section -->
- <section class="min-vh-100 mt-5 mb-5 d-flex bg-primary align-items-center">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-8 col-lg-6 justify-content-center">
-                <div class="card bg-primary shadow-soft border-light p-4">
-                    <div class="card-header text-center pb-0">
-                        <h2 class="mb-0 h5">관리자 삭제</h2>                               
-                    </div>
-                    <div class="card-body">
-                        <form action="/admin/delete" method="post">
-                            <!-- Form -->
-                            <div class="form-group">
-                                <label for="exampleInputIcon4">아이디(ID)</label>
-                                <div class="input-group mb-4">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text"><span class="fas fa-user"></span></span>
-                                    </div>
-                                    <input class="form-control" id="exampleInputIcon4" 
-                                    name="adminId" placeholder="ID를 입력하세요." type="text">
-                                </div>
-                            </div>
-                            <!-- End of Form -->
-                            <div class="form-group">
-                                <!-- Form -->
-                                <div class="form-group">
-                                    <label for="exampleInputPassword7">Password</label>
-                                    <div class="input-group mb-4">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text"><span class="fas fa-unlock-alt"></span></span>
-                                        </div>
-                                        <input class="form-control" id="exampleInputPassword7"
-                                         placeholder="Password" type="password" aria-label="Password" 
-                                         name="adminPw"
-                                         required>
-                                    </div>
+<!DOCTYPE html>
+<html lang="ko">
 
-                                    <button type="submit" class="btn btn-block btn-primary">관리자 삭제</button>
-                                </div>
-                            </div>
-                            </form>
-                        </div>
-                                <!-- End of Form -->
-                                <!-- Form -->
+
+
+<head>
+    <div class="wrap">
+
+        <div class="btn-group btn-group-lg custom-btn-group" role="group">
+
+            <h1>관리자 삭제</h1>
+
+            <div class="write-container">
+
+                <form action="/admin/delete" method="post" autocomplete="off">
+
+                   
+
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">아이디</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="아이디를 입력해주세요"
+                            name="adminId">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput2" class="form-label">비밀번호</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="비밀번호를 입력해주세요"
+                            name="adminPw">
+                    </div>
+                   
+            
+                
+                       
+                  
+                    
+                    
+
+
+
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-dark" type="submit">관리자 등록하기</button>
+                        <button id="to-list" class="btn btn-warning" type="button">목록으로</button>
+                    </div>
+
+                    
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script>
+        //목록버튼 이벤트
+        const $toList = document.getElementById('to-list');
+        $toList.onclick = e => {
+            location.href = '/project/list';
+        };
+    </script>

@@ -10,7 +10,7 @@
     <insert id="createAdmin">
         INSERT INTO service_admin
         VALUES
-        #{adminId}, #{adminPw}, #{grade}
+        (#{adminId}, #{adminPw}, #{grade})
     </insert>
 
     <!--  관리자 삭제  -->

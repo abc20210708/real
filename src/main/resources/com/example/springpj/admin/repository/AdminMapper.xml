@@ -50,8 +50,8 @@
     </resultMap>
 
     <!-- AS 목록 조회   -->
-    <select id="GetRequestList" resultMap="requestMap">
-        SELECT * FROM service_admin
+    <select id="getRequestList" resultMap="requestMap">
+        SELECT * FROM as_apply
     </select>
 
 

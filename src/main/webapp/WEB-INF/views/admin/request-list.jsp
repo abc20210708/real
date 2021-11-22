@@ -14,7 +14,7 @@
 
 
             <!-- <button id="list" type="button" class="btn btn-dark">목록</button> -->
-            <c:forEach var="req" items="${request}">
+            <c:forEach var="req" items="${req}">
 
 
 

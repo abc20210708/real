@@ -232,9 +232,9 @@
                                             <label for="validationServer01">수량</label>
                                             <select  class="custom-select mr-sm-2" id="inlineFormCustomSelectPref" name="amount">
                                                 <option selected>선택하세요...</option>
-                                                <option value="1" <c:if test="${amount eq '1'}">selected</c:if>> 1</option>
-                                                <option value="2" <c:if test="${amount eq '2'}">selected</c:if>> 2</option>
-                                                <option value="3" <c:if test="${amount eq '3'}">selected</c:if>> 3</option>
+                                                <option value="1"> 1</option>
+                                                <option value="2"> 2</option>
+                                                <option value="3"> 3</option>
                                             </select>            
                                         </div>
                                     </div>
@@ -244,9 +244,9 @@
                                             <label for="validationServer01">방식</label>
                                             <select  class="custom-select mr-sm-2" id="inlineFormCustomSelectPref" name="asChoice" >
                                                 <option selected>선택하세요...</option>
-                                                <option value="출장" <c:if test="${asChoice eq '출장'}">selected</c:if>>출장</option>
-                                                <option value="방문" <c:if test="${asChoice eq '방문'}">selected</c:if>>방문</option>
-                                                <option value="배송" <c:if test="${asChoice eq '배송'}">selected</c:if>>배송</option>
+                                                <option value="출장">출장</option>
+                                                <option value="방문">방문</option>
+                                                <option value="배송">배송</option>
                                             </select>            
                                         </div>
                                     </div>

@@ -47,7 +47,10 @@
 
 
         
-    
+        
+
+        <div class="bottom-group">
+            
 
             <div class="btn-group btn-group-lg custom-btn-group" role="group">
                 <button id="mod-btn" type="button" class="btn btn-warning">수정</button>
@@ -56,7 +59,6 @@
         </div>
     </div>   
 </div>
-
 
 
 <script>
@@ -69,6 +71,7 @@
         location.href = '/user/modify?csNum=5';
     };
    
+
 
     //목록버튼
     const $listBtn = document.getElementById('list-btn');

@@ -21,5 +21,12 @@
         DELETE FROM cs_user WHERE cs_id = #{id} AND pw = #{pw}
     </delete>
 
+    <!--  회원 수정 -->
+    <update id="update">
+            UPDATE cs_user SET
+            address = #{address}, postal_code = #{postalCode}, phone=#{phone}
+            WHERE cs_num=5
+    </update>
+
 
 </mapper>

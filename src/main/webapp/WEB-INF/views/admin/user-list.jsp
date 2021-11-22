@@ -8,7 +8,7 @@
 <head>
     <div class="wrap">
 
-        <div class="btn-group btn-group-lg custom-btn-group" role="group" >
+        <div class="btn-group btn-group-lg custom-btn-group articles" role="group" >
 
 <!-- <button id="list" type="button" class="btn btn-dark">목록</button> -->
             <c:forEach var="as" items="${cs}">
@@ -35,3 +35,5 @@
 
 
     </div>
+
+ 

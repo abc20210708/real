@@ -166,7 +166,7 @@
                             <div class="card-body p-0">
                                 <div class="tab-content" id="tabcontent1">
                                     <div class="tab-pane fade show active" id="tabs-text-1" role="tabpanel" aria-labelledby="tabs-text-1-tab">
-                                        <table class="table shadow-soft rounded">
+                                        <table class="table shadow-soft rounded articles">
                                             <tr class="text-center text-info">
                                                 <th class="border-0" scope="col">번호</th>
                                                 <th class="border-0" scope="col">아이디</th>
@@ -327,6 +327,19 @@
                 location.href = '/request/request';
             };
 
+
+             //상세보기 요청 이벤트
+            const $table = document.querySelector(".articles");
+            $table.addEventListener('click', e => {
+                if (!e.target.matches('.articles td')) return;
+
+                //console.log('tr 클릭됨! - ', e.target);
+
+                let id = e.target.parentElement.firstElementChild.nextsibling.textContent;
+                console.log('회원아이디: ' + id);
+
+                location.href = '/admin/user/content?csId=' + id;
+            });
 
     </script>
 

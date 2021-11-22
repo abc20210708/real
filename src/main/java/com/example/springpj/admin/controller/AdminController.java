@@ -67,26 +67,15 @@ public class AdminController {
         return "redirect:/main/index";
     }
 
-
-    //관리자가 회원을 조회
-    /*@GetMapping("/user-list")
-    public String userList(Model model) {
-        log.info ("회원 전체 조회 GET!");
-        List<User> csUserList = adminService.getUserList();
-        model.addAttribute("cs",csUserList);
-        return "admin/admin";
-    }*/
-/*
-
-    //관리자 AS 목록
-    @GetMapping("/request-list")
-    public String Requestlist(Model model) {
-        log.info("관리자 AS 조회 GET!");
-        List<Request> requestList = adminService.getRequestList();
-        model.addAttribute("req",requestList);
-        return "admin/admin";
+    //상세 조회 요청
+    //admin/user/content?csId=aaa123@naver.com
+    @GetMapping("/user/content")
+    public String userContent(String csId, Model model) {
+        log.info("회원 상세 목록 조회!! GET!!" + csId);
+        User user = adminService.getUserContent(csId);
+        model.addAttribute("user",user);
+        return "admin/user-content";
     }
-*/
 
 
 

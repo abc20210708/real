@@ -31,4 +31,6 @@ class AdminMapperTest {
     @Test
     void getAdminList() {
     }
+
+
 }

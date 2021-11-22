@@ -50,4 +50,13 @@ public class AdminService {
         return requestList;
     }
 
+    //회원 상세 조회 중간 처리
+    public User getUserContent(String csId) {
+        log.info("회원 상세 조회 중간 처리! " +csId);
+        return adminMapper.getUserContent(csId);
+    }
+
+
+
+
 }//end class

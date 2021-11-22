@@ -8,9 +8,7 @@ import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
 
-/**
- *
- */
+
 @Mapper
 public interface AdminMapper {
 
@@ -28,4 +26,10 @@ public interface AdminMapper {
 
     //AS 목록 조회하기
     List<Request> getRequestList();
+
+    //회원 목록 상세조회
+    User getUserContent(String csId);
+
+    //AS 목록 상세조회
+    Request getRequestContent(String asNum);
 }//

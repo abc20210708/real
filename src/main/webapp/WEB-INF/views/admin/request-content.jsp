@@ -8,7 +8,7 @@
 
     <div class="content-container">
 
-        <h1 class="main-title">${req.boardNo}번 신청 세부사항</h1>
+        <h1 class="main-title">${req.asNum}번 신청 세부사항</h1>
 
         <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">회원아이디</label>

@@ -345,9 +345,9 @@
 
             
              //AS 상세보기 요청 이벤트
-             const $table = document.querySelector(".articles2");
-            $table.addEventListener('click', e => {
-                if (!e.target.matches('.articles th')) return;
+             const $table2 = document.querySelector(".articles2");
+                $table2.addEventListener('click', e => {
+                if (!e.target.matches('.articles2 th')) return;
 
                 console.log('클릭됨! - ', e.target);
 

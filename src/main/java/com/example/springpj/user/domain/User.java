@@ -9,7 +9,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 @Getter @Setter @ToString
-@NoArgsConstructor
+
 public class User {
 
     private String id;
@@ -20,14 +20,18 @@ public class User {
     private String  phone;
     private int grade;
     private String gender;
-    private int csNum;
+    private Long csNum;
 
+    private static long seq2;
 
+    public User() {
+        this.csNum = ++seq2;
+    }
 
     public User(String id, String pw, String name,
                 String address, int postalCode,
                 String  phone, int grade, String gender
-                    , int csNum) {
+                    , Long csNum) {
         this.id = id;
         this.pw = pw;
         this.name = name;
@@ -48,6 +52,6 @@ public class User {
         this.phone= rs.getString("phone");
         this.grade = rs.getInt("grade");
         this.gender = rs.getString("gender");
-        this.csNum = rs.getInt("cs_num");
+        this.csNum = rs.getLong("cs_num");
     }
 }//end class

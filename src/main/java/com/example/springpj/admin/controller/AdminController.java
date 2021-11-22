@@ -24,7 +24,7 @@ public class AdminController {
 
     private final AdminService adminService;
 
-    //관리자 전체 조회
+    //관리자 회원 및 AS 조회
     @GetMapping("/list")
     public String list(Model model) {
         log.info("관리자 회원 및 AS 조회 GET!");
@@ -70,7 +70,7 @@ public class AdminController {
     //회원 상세 조회 요청
     //admin/user/content?csNum=3
     @GetMapping("/user/content")
-    public String userContent(int csNum, Model model) {
+    public String userContent(Long csNum, Model model) {
         log.info("회원 상세 목록 조회!! GET!!" + csNum);
         User user = adminService.getUserContent(csNum);
         model.addAttribute("user",user);
@@ -80,7 +80,7 @@ public class AdminController {
     //상세 조회 요청
     //admin/user/content?csNum=3
     @GetMapping("/request/content")
-    public String requestContent(int asNum, Model model) {
+    public String requestContent(Long asNum, Model model) {
         log.info("회원 상세 목록 조회!! GET!!" + asNum);
         Request request =  adminService.getRequestContent(asNum);
         model.addAttribute("req",request);

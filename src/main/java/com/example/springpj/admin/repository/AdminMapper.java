@@ -28,8 +28,8 @@ public interface AdminMapper {
     List<Request> getRequestList();
 
     //회원 목록 상세조회
-    User getUserContent(int csNum);
+    User getUserContent(Long csNum);
 
     //AS 목록 상세조회
-    Request getRequestContent(int asNum);
+    Request getRequestContent(Long asNum);
 }//

@@ -27,7 +27,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="exampleFormControlInput2" class="form-label">비밀번호</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="비밀번호를 입력해주세요"
+                        <input type="password" class="form-control" id="exampleFormControlInput2" placeholder="비밀번호를 입력해주세요"
                             name="adminPw">
                     </div>
                    

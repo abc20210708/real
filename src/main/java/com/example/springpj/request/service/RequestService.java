@@ -22,9 +22,6 @@ public class RequestService {
         return requestMapper.insertRequest(request);
     }
 
-    //AS 목록 중간 처리
-    public List<Request> getRequestList() {
-        return requestMapper.getList();
-    }
+
 
 }

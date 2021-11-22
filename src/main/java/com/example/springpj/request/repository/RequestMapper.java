@@ -12,8 +12,7 @@ public interface RequestMapper {
     //AS 신청하기 - 회원
     boolean insertRequest(Request request);
 
-    //AS 목록 조회 - 관리자
-    List<Request> getList();
+
 
 
 

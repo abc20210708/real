@@ -30,7 +30,7 @@ public class AdminController {
         log.info("관리자 전체 조회 GET!");
         List<Admin> adminList = adminService.getList();
         model.addAttribute("admin", adminList);
-        return "admin/list";
+        return "admin/admin";
     }
 
     //관리자 등록 요청 - 화면
@@ -44,6 +44,7 @@ public class AdminController {
     @PostMapping("/account")
     public String write(Admin admin) {
         log.info("관리자 등록 ==> POST!" + admin);
+        adminService.write(admin);
         return "redirect:/main/index";
     }
 
@@ -56,8 +57,9 @@ public class AdminController {
 
     //관리자 삭제
     @PostMapping("/delete")
-    public String delete(String id, String pw) {
-        log.info("관리자 삭제 요청  ==> POST!!"+ id, pw);
+    public String delete(String adminId, String adminPw) {
+        log.info("관리자 삭제 요청  ==> POST!!"+ adminId, adminPw);
+        adminService.delete(adminId, adminPw);
         return "redirect:/main/index";
     }
 
@@ -68,7 +70,7 @@ public class AdminController {
         log.info ("회원 전체 조회 GET!");
         List<User> csUserList = adminService.getUserList();
         model.addAttribute("cs",csUserList);
-        return "admin/user-list";
+        return "admin/admin";
     }
 
     //관리자 AS 목록
@@ -77,7 +79,7 @@ public class AdminController {
         log.info("관리자 AS 조회 GET!");
         List<Request> requestList = adminService.getRequestList();
         model.addAttribute("req",requestList);
-        return "admin/request-list";
+        return "admin/admin";
     }
 
 

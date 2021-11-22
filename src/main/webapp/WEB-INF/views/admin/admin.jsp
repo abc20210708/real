@@ -1,6 +1,8 @@
 <%@ page contentType="text/html; charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -134,154 +136,98 @@
     </header>
 
     <main>
-        <!-- Section -->
-        <section class="section section-lg">
+        <div class="section section-header pb-7">
             <div class="container">
-                <div class="row align-items-center justify-content-center">
-                    <div class="col-md-12 col-lg-12 mb-5">
-                        <!-- Contact Card -->
-                        <div class="card bg-primary shadow-soft border-light p-2 p-md-3 p-lg-5">
-                            <div class="card-header">
-                                <div class="row justify-content-center">
-                                    <div class="col-12">
-                                        <div class="shadow-inset p-4 mb-5 rounded">
-                                            <img src="/img/img-refr-210813-pc.webp" alt="">
-                                        </div>
+                <!-- Title -->
+                <div class="row">
+                    <div class="col text-center">
+                        <h2 class="h5 mb-5">???관리자님 환영합니다.</h2>
+                    </div>
+                </div>
+                <!-- End of title-->
+                <div class="row justify-content-md-around">
+                    <div class="col-lg-12 mb-5 mb-lg-0">
+                        <!-- Tab Nav -->
+                        <div class="nav-wrapper position-relative mb-4">
+                            <ul class="nav nav-pills flex-column flex-sm-row" id="tabs-text" role="tablist">
+                                <li class="nav-item mr-sm-3 mr-md-0">
+                                    <a class="nav-link mb-sm-3 mb-md-0 active" id="tabs-text-1-tab" data-toggle="tab" href="#tabs-text-1" role="tab" aria-controls="tabs-text-1" aria-selected="true">회원 정보</a>
+                                </li>
+                                <li class="nav-item mr-sm-3 mr-md-0">
+                                    <a class="nav-link mb-sm-3 mb-md-0" id="tabs-text-2-tab" data-toggle="tab" href="#tabs-text-2" role="tab" aria-controls="tabs-text-2" aria-selected="false">A/S 현황</a>
+                                </li>
+                                <li class="nav-item mr-sm-3 mr-md-0">
+                                    <a class="nav-link mb-sm-3 mb-md-0" id="tabs-text-3-tab" data-toggle="tab" href="#tabs-text-3" role="tab" aria-controls="tabs-text-3" aria-selected="false">공지사항</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- End of Tab Nav -->
+                        <!-- Tab Content -->
+                        <div class="card shadow-inset bg-primary border-light p-4 rounded">
+                            <div class="card-body p-0">
+                                <div class="tab-content" id="tabcontent1">
+                                    <div class="tab-pane fade show active" id="tabs-text-1" role="tabpanel" aria-labelledby="tabs-text-1-tab">
+                                        <table class="table shadow-soft rounded">
+                                            <tr class="text-center text-info">
+                                                <th class="border-0" scope="col">번호</th>
+                                                <th class="border-0" scope="col">아이디</th>
+                                                <th class="border-0" scope="col">이름</th>
+                                                <th class="border-0" scope="col">연락처</th>
+                                                <th class="border-0" scope="col">성별</th>
+                                            </tr>
+                                            <tr class="text-center">
+                                                <th scope="col">1</th>
+                                                <th scope="col">abc</th>
+                                                <th scope="col">김이름</th>
+                                                <th scope="col">010-1234-5678</th>
+                                                <th scope="col">여성</th>
+                                            </tr>
+                                        </table>
                                     </div>
-                                    <div class="col-12 col-md-8 text-center mb-5">
-                                        <h1 class="display-3 mb-3">불편하신 점이 있으셨나요?</h1>
-                                        <p class="lead">하단 절차에 따라 A/S 절차가 진행되며 신청에 어려움이 있으신 고객께서는 고객센터(1544-1234)로 문의하시면 상담사가 접수를 도와 드리겠습니다.</p>
+                                    <div class="tab-pane fade" id="tabs-text-2" role="tabpanel" aria-labelledby="tabs-text-2-tab">
+                                        <table class="table shadow-soft rounded">
+                                            <tr class="text-center text-info">
+                                                <th class="border-0" scope="col">신청코드</th>
+                                                <th class="border-0" scope="col">제품코드</th>
+                                                <th class="border-0" scope="col">회원아이디</th>
+                                                <th class="border-0" scope="col">방문선택</th>
+                                                <th class="border-0" scope="col">신청일자</th>
+                                            </tr>
+                                            <tr class="text-center">
+                                                <th scope="col">As001</th>
+                                                <th scope="col">P001</th>
+                                                <th scope="col">abc</th>
+                                                <th scope="col">출장서비스</th>
+                                                <th scope="col">2021.11.19</th>
+                                            </tr>
+                                        </table>
                                     </div>
-                                </div>
-                                <div class="row mb-5">
-                                    <div class="col-md-4 col-lg-4 text-center">
-                                        <!-- Visit Box -->
-                                        <div class="icon-box mb-4">
-                                            <div class="icon icon-shape shadow-soft border-light rounded-circle mb-4">
-                                                <span class="fas fa-comment-medical"></span>
-                                            </div>
-                                            <h2 class="h5 icon-box-title">A/S신청</h2>
-                                            <span>
-                                                제품군 선택
-                                                <br>
-                                                신청내역입력
-                                            </span>
-                                        </div>
-                                        <!-- End of Visit Box -->
-                                    </div>
-                                    <div class="col-md-4 col-lg-4 text-center">
-                                        <!-- Call Box -->
-                                        <div class="icon-box mb-4">
-                                            <div class="icon icon-shape shadow-soft border-light rounded-circle mb-4">
-                                                <span class="fas fa-headphones-alt"></span>
-                                            </div>
-                                            <h2 class="h5 icon-box-title">A/S 접수</h2>
-                                            <span>신청 접수</span>
-                                            <div class="text-small text-gray">
-                                                제품 회수 혹은 방문
-                                            </div>
-                                        </div>
-                                        <!-- End of Call Box -->
-                                    </div>
-                                    <div class="col-md-4 col-lg-4 text-center">
-                                        <!-- Email Box -->
-                                        <div class="icon-box mb-4">
-                                            <div class="icon icon-shape shadow-soft border-light rounded-circle mb-4">
-                                                <span class="fas fa-tools"></span>
-                                            </div>
-                                            <h2 class="h5 icon-box-title">A/S 처리</h2>
-                                            <span>
-                                                방문 현장 수리
-                                                <br>
-                                                회수된 제품 수리 후 배송
-                                            </span>
-                                        </div>
-                                        <!-- End of Email Box -->
+                                    <div class="tab-pane fade" id="tabs-text-3" role="tabpanel" aria-labelledby="tabs-text-3-tab">
+                                        <button class="btn btn-primary mb-3 float-right text-danger" type="button">
+                                            <span class="mr-1"><span class="far fa-edit"></span></span>
+                                            글쓰기
+                                        </button>
+                                        <table class="table shadow-soft rounded">
+                                            <tr class="text-center text-info">
+                                                <th class="border-0" scope="col">글번호</th>
+                                                <th class="border-0" scope="col">제목</th>
+                                                <th class="border-0" scope="col">날짜</th>
+                                            </tr>
+                                            <tr class="text-center">
+                                                <th scope="col">1</th>
+                                                <th scope="col">[공지사항] 11월 센터 휴무일 안내</th>
+                                                <th scope="col">2011.11.19</th>
+                                            </tr>
+                                        </table>
                                     </div>
                                 </div>
                             </div>
-                            <form action="/request/request" method="post" class="col-12 col-md-8 mx-auto">
-                                <!-- Form -->
-                                <div class="form-group">
-                                    <label class="my-1 mr-2" for="inlineFormCustomSelectPref">제품명(제품코드)</label>
-                                    <select  class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref" name="productName">
-                                        <option selected>선택하세요...</option>
-                                        <option value="TV"> TV</option>
-                                        <option value="냉장고">냉장고</option>
-                                        <option value="세탁기">세탁기</option>
-                                        <option value="정수기">정수기</option>
-                                        <option value="에어컨">에어컨</option>
-                                        <option value="노트북">노트북</option>
-                                        <option value="카메라">카메라</option>
-                                        <option value="핸드폰"> 핸드폰</option>
-                                    </select>
-                                </div>
-                                <!-- Form -->
-                                <div class="col-lg-12 row">
-                                    <div class="col-lg-4 col-sm-6">
-                                        <!-- Form -->
-                                        <div class="form-group">
-                                            <label for="validationServer01">신청자</label>
-                                            <input type="text" class="form-control is-valid" id="validationServer01"
-                                            placeholder="마지막가입유저"  name="csId" required>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-sm-6">
-                                        <!-- Form -->
-                                        <div class="form-group">
-                                            <label for="validationServer01">수량</label>
-                                            <select  class="custom-select mr-sm-2" id="inlineFormCustomSelectPref" name="amount">
-                                                <option selected>선택하세요...</option>
-                                                <option value="1"> 1</option>
-                                                <option value="2"> 2</option>
-                                                <option value="3"> 3</option>
-                                            </select>            
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-sm-6">
-                                        <!-- Form -->
-                                        <div class="form-group">
-                                            <label for="validationServer01">방식</label>
-                                            <select  class="custom-select mr-sm-2" id="inlineFormCustomSelectPref" name="asChoice" >
-                                                <option selected>선택하세요...</option>
-                                                <option value="출장">출장</option>
-                                                <option value="방문">방문</option>
-                                                <option value="배송">배송</option>
-                                            </select>            
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Form -->
-                                <div class="form-group">
-                                    <label for="exampleFormControlTextarea2">세부 증상</label>
-                                    <textarea class="form-control"
-                                     placeholder="전달 사항이 구체적일수록 수리 기간의 단축에 도움이 될 수 있습니다."
-                                      id="exampleFormControlTextarea2" 
-                                      rows="4" name="asComment"></textarea>
-                                </div>
-                                <!-- End of Form -->
-                                <div class="alert-danger">
-                                    <hr>
-                                    <ul>
-                                        <li>입력하신 정보가 정확하지 않을 경우 서비스가 취소 또는 지연될 수 있습니다.</li>
-                                        <li>일부 도서[섬] 지역의 경우 관련 법령에 따라 일부 서비스가 제한될 수 있습니다.</li>
-                                    </ul>
-                                </div>
-                                
-                                <div class="card-footer px-0 mx-auto">
-                                    <button type="submit" id="submitBtn" class="btn btn-primary">A/S 신청</button>
-                                </div>
-                                
-                            </form>
-                            
-                            
                         </div>
-                        <!-- End of Contact Card -->
+                        <!-- End of Tab Content -->
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- End of section -->
+        </div>
     </main>
 
     <footer class="d-flex pb-5 pt-6 pt-md-7 border-top border-light bg-primary">
@@ -369,22 +315,5 @@
             </div>
         </div>
     </footer>
-
-    <script>
-
-                //신청 버튼
-                const $submitBtn = document.getElementById('submitBtn');
-
-                $submitBtn.onclick = e => {
-                    location.href = '/main/index';
-                };
-
-
-              
-
-    </script>
-
-
-
 </body>
 </html>

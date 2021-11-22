@@ -9,6 +9,7 @@
     <!-- 관리자 등록   -->
     <insert id="createAdmin">
         INSERT INTO service_admin
+        (admin_id, admin_pw, grade)
         VALUES
         (#{adminId}, #{adminPw}, #{grade})
     </insert>

@@ -32,9 +32,9 @@ public class AdminService {
     }
 
     //관리자 삭제 중간처리
-    public boolean delete(String id, String pw) {
+    public boolean delete(String adminId, String adminPw) {
         log.info("관리자 삭제 중간처리!");
-        return adminMapper.deleteAdmin(id, pw);
+        return adminMapper.deleteAdmin(adminId, adminPw);
     }
 
 

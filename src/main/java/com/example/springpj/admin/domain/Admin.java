@@ -1,9 +1,6 @@
 package com.example.springpj.admin.domain;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -11,6 +8,7 @@ import java.sql.SQLException;
 @Getter @Setter
 @ToString
 @NoArgsConstructor
+@Builder
 public class Admin {
 
     private String adminId;

@@ -29,7 +29,7 @@
     <header class="header-global">
         <nav id="navbar-main" aria-label="Primary navigation" class="navbar navbar-main navbar-expand-lg navbar-theme-primary headroom navbar-light navbar-transparent navbar-theme-primary">
             <div class="container position-relative">
-                <a class="navbar-brand shadow-soft py-2 px-3 rounded border border-light mr-lg-4" href="./index.html">
+                <a class="navbar-brand shadow-soft py-2 px-3 rounded border border-light mr-lg-4" href="/main/index">
                     <img class="navbar-brand-dark" src="/img/italic(blue).png" alt="Logo light">
                     <img class="navbar-brand-light" src="/img/italic(blue).png" alt="Logo dark">
                 </a>
@@ -48,7 +48,7 @@
                     </div>
                     <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
                         <li class="nav-item dropdown">
-                            <a href="#" class="nav-link" data-toggle="dropdown" >
+                            <a href="/request/request" id="requestBtn" class="nav-link" data-toggle="dropdown" >
                                 <span class="nav-link-inner-text">A/S신청</span>
                             </a>
                         </li>
@@ -125,8 +125,7 @@
                     </ul>
                 </div>
                 <div class="d-flex align-items-center">
-                    <a href="sign-up.html" class="btn btn-primary text-secondary mr-3"><i class="fas fa-user-plus mr-2"></i> 회원가입</a>
-                    <a href="sign-in.html" class="btn btn-primary d-none d-md-inline-block"><i class="fas fa-sign-in-alt"></i> 로그인</a>
+                  
                     <button class="navbar-toggler ml-2" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -175,31 +174,35 @@
                                                 <th class="border-0" scope="col">연락처</th>
                                                 <th class="border-0" scope="col">성별</th>
                                             </tr>
-                                            <tr class="text-center">
-                                                <th scope="col">1</th>
-                                                <th scope="col">abc</th>
-                                                <th scope="col">김이름</th>
-                                                <th scope="col">010-1234-5678</th>
-                                                <th scope="col">여성</th>
-                                            </tr>
+                                            <c:forEach var="cs" items="${cs}">  
+                                                <tr class="text-center">
+                                                    <th scope="col">${cs.csNum}</th>
+                                                    <th scope="col">${cs.id}</th>
+                                                    <th scope="col">${cs.name}</th>
+                                                    <th scope="col">${cs.phone}</th>
+                                                    <th scope="col">${cs.gender}</th>
+                                                </tr>
+                                            </c:forEach>  
                                         </table>
                                     </div>
                                     <div class="tab-pane fade" id="tabs-text-2" role="tabpanel" aria-labelledby="tabs-text-2-tab">
                                         <table class="table shadow-soft rounded">
                                             <tr class="text-center text-info">
                                                 <th class="border-0" scope="col">신청코드</th>
-                                                <th class="border-0" scope="col">제품코드</th>
+                                                <th class="border-0" scope="col">제품명</th>
                                                 <th class="border-0" scope="col">회원아이디</th>
                                                 <th class="border-0" scope="col">방문선택</th>
                                                 <th class="border-0" scope="col">신청일자</th>
                                             </tr>
+                                            <c:forEach var="req" items="${req}">
                                             <tr class="text-center">
-                                                <th scope="col">As001</th>
-                                                <th scope="col">P001</th>
-                                                <th scope="col">abc</th>
-                                                <th scope="col">출장서비스</th>
-                                                <th scope="col">2021.11.19</th>
+                                                    <th scope="col">${req.asNum}</th>
+                                                    <th scope="col">${req.productName}</th>
+                                                    <th scope="col">${req.csId}</th>
+                                                    <th scope="col">${req.asChoice}</th>
+                                                    <th scope="col">${req.asDate}</th> 
                                             </tr>
+                                        </c:forEach>
                                         </table>
                                     </div>
                                     <div class="tab-pane fade" id="tabs-text-3" role="tabpanel" aria-labelledby="tabs-text-3-tab">
@@ -315,5 +318,19 @@
             </div>
         </div>
     </footer>
+
+    <script>
+             // AS 버튼
+             const $requestBtn = document.getElementById('requestBtn');
+            
+            $requestBtn.onclick = e => {
+                location.href = '/request/request';
+            };
+
+
+    </script>
+
+
+
 </body>
 </html>

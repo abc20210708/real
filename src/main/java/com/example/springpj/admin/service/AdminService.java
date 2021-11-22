@@ -45,8 +45,9 @@ public class AdminService {
 
     //AS 조회 중간 처리
     public List<Request> getRequestList() {
-        log.info("AS 조회 중간 처리");
-        return adminMapper.getRequestList();
+        List<Request> requestList = adminMapper.getRequestList();
+        log.info("AS 조회 중간 처리" + requestList);
+        return requestList;
     }
 
 }//end class

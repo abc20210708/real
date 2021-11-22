@@ -27,7 +27,7 @@
     <header class="header-global">
         <nav id="navbar-main" aria-label="Primary navigation" class="navbar navbar-main navbar-expand-lg navbar-theme-primary headroom navbar-light navbar-transparent navbar-theme-primary">
             <div class="container position-relative">
-                <a class="navbar-brand shadow-soft py-2 px-3 rounded border border-light mr-lg-4" href="./index.html">
+                <a class="navbar-brand shadow-soft py-2 px-3 rounded border border-light mr-lg-4" id="homeBtn" href="/main/index">
                     <img class="navbar-brand-dark" src="/img/italic(blue).png" alt="Logo light">
                     <img class="navbar-brand-light" src="/img/italic(blue).png" alt="Logo dark">
                 </a>
@@ -123,8 +123,8 @@
                     </ul>
                 </div>
                 <div class="d-flex align-items-center">
-                    <a href="sign-up.html" class="btn btn-primary text-secondary mr-3"><i class="fas fa-user-plus mr-2"></i> 회원가입</a>
-                    <a href="sign-in.html" class="btn btn-primary d-none d-md-inline-block"><i class="fas fa-sign-in-alt"></i> 로그인</a>
+                    <a href="/user/account" class="btn btn-primary text-secondary mr-3"><i class="fas fa-user-plus mr-2"></i> 회원가입</a>
+                    <a href="/login/user" class="btn btn-primary d-none d-md-inline-block"><i class="fas fa-sign-in-alt"></i> 로그인</a>
                     <button class="navbar-toggler ml-2" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -267,7 +267,7 @@
                                         <li>일부 도서[섬] 지역의 경우 관련 법령에 따라 일부 서비스가 제한될 수 있습니다.</li>
                                     </ul>
                                 </div>
-                                
+
                                 <div class="card-footer px-0 mx-auto">
                                     <button type="submit" id="submitBtn" class="btn btn-primary">A/S 신청</button>
                                 </div>
@@ -379,7 +379,7 @@
                     location.href = '/main/index';
                 };
 
-
+              
               
 
     </script>

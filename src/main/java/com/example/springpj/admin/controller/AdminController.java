@@ -27,9 +27,13 @@ public class AdminController {
     //관리자 전체 조회
     @GetMapping("/list")
     public String list(Model model) {
-        log.info("관리자 전체 조회 GET!");
-        List<Admin> adminList = adminService.getList();
-        model.addAttribute("admin", adminList);
+        log.info("관리자 회원 및 AS 조회 GET!");
+        //List<Admin> adminList = adminService.getList();
+       // model.addAttribute("admin", adminList);
+        List<User> csUserList = adminService.getUserList();
+        model.addAttribute("cs",csUserList);
+        List<Request> requestList = adminService.getRequestList();
+        model.addAttribute("req",requestList);
         return "admin/admin";
     }
 
@@ -65,13 +69,14 @@ public class AdminController {
 
 
     //관리자가 회원을 조회
-    @GetMapping("/user-list")
+    /*@GetMapping("/user-list")
     public String userList(Model model) {
         log.info ("회원 전체 조회 GET!");
         List<User> csUserList = adminService.getUserList();
         model.addAttribute("cs",csUserList);
         return "admin/admin";
-    }
+    }*/
+/*
 
     //관리자 AS 목록
     @GetMapping("/request-list")
@@ -81,6 +86,9 @@ public class AdminController {
         model.addAttribute("req",requestList);
         return "admin/admin";
     }
+*/
+
+
 
 
 }//end class

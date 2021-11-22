@@ -34,6 +34,7 @@
     <resultMap id="userMap" type="com.example.springpj.user.domain.User">
         <result property="id" column="cs_id" />
         <result property="name" column="cs_name" />
+        <result property="csNum" column="cs_num" />
         <result property="postalCode" column="postal_code" />
     </resultMap>
 
@@ -43,7 +44,7 @@
 
     <resultMap id="requestMap" type="com.example.springpj.request.domain.Request">
         <result property="asNum" column="as_num" />
-        <result property="cdId" column="cd_id" />
+        <result property="csId" column="cs_id" />
         <result property="productName" column="product_name" />
         <result property="asChoice" column="as_choice" />
         <result property="asComment" column="as_comment" />

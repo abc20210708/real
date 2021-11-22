@@ -126,8 +126,8 @@
                 <div class="d-flex align-items-center">
                     <a href="/user/account" class="btn btn-primary text-secondary mr-3"><i class="fas fa-user-plus mr-2"></i> 회원가입</a>
                     
-                    <a href="/login/sign-in" class="btn btn-primary d-none d-md-inline-block"><i class="fas fa-sign-in-alt"></i> 로그인</a>
-                    <a href="/admin/login" class="btn btn-primary d-none d-md-inline-block"><i class="fas fa-sign-in-alt"></i> 관리자로그인</a>
+                    <a href="/login/user" class="btn btn-primary d-none d-md-inline-block"><i class="fas fa-sign-in-alt"></i> 로그인</a>
+                    <a href="/login/admin" class="btn btn-primary d-none d-md-inline-block"><i class="fas fa-sign-in-alt"></i> 관리자로그인</a>
                     <button class="navbar-toggler ml-2" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -145,7 +145,7 @@
                         <h1 class="display-2 mb-4">We are ISEC A/S</h1>
                         <p class="lead">직접 해결하는 방법을 알려드리고 서비스 및 제품에 대한 궁금증을 상담해드립니다.</p>
                         <p class="lead mb-5">제품별 사용설명서 및 관리에 대한 팁을 알려드리고 제품 고장시 출장/방문 예약부터 부품교체 및 하자 수리까지 도와드립니다.</p>
-                        <a class="btn text-secondary btn-primary" href="#"><span  class="fas fa-tools text-secondary mr-2"></span>A/S 신청</a></div>
+                        <a class="btn text-secondary btn-primary" href="#" id="asBtn2" ><span  class="fas fa-tools text-secondary mr-2"></span>A/S 신청</a></div>
                 </div>
             </div>        
         </div>
@@ -306,7 +306,7 @@
                     <ul class="d-flex list-unstyled mb-5 mb-lg-0">
                         <li class="mr-2">
                             <a href="#" target="_blank" class="btn btn-icon-only btn-pill btn-primary" aria-label="twitter social link"
-                            data-toggle="tooltip" data-placement="top" title="Follow @themesberg on Twitter">
+                                data-toggle="tooltip" data-placement="top" title="Follow @themesberg on Twitter">
                                 <span aria-hidden="true" class="fab fa-twitter"></span>
                             </a>
                         </li>
@@ -389,6 +389,12 @@
     const $asBtn = document.getElementById('asBtn');
 
     $asBtn.onclick = e => {
+        location.href = '/request/request';
+    };
+
+    const $asBtn2 = document.getElementById('asBtn2');
+
+    $asBtn2.onclick = e => {
         location.href = '/request/request';
     };
     </script>

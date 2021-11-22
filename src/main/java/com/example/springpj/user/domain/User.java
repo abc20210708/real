@@ -20,12 +20,14 @@ public class User {
     private String  phone;
     private int grade;
     private String gender;
+    private int csNum;
 
 
 
     public User(String id, String pw, String name,
                 String address, int postalCode,
-                String  phone, int grade, String gender) {
+                String  phone, int grade, String gender
+                    , int csNum) {
         this.id = id;
         this.pw = pw;
         this.name = name;
@@ -34,6 +36,7 @@ public class User {
         this.phone = phone;
         this.grade = grade;
         this.gender = gender;
+        this.csNum = csNum;
     }
 
     public User(ResultSet rs) throws SQLException {
@@ -45,5 +48,6 @@ public class User {
         this.phone= rs.getString("phone");
         this.grade = rs.getInt("grade");
         this.gender = rs.getString("gender");
+        this.csNum = rs.getInt("cs_num");
     }
 }//end class

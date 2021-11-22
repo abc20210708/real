@@ -21,7 +21,7 @@
                                         <span class="input-group-text"><span class="fas fa-user"></span></span>
                                     </div>
                                     <input class="form-control" id="exampleInputIcon4" 
-                                    name="id" placeholder="ID를 입력하세요." type="text">
+                                    name="adminId" placeholder="ID를 입력하세요." type="text">
                                 </div>
                             </div>
                             <!-- End of Form -->
@@ -35,7 +35,7 @@
                                         </div>
                                         <input class="form-control" id="exampleInputPassword7"
                                          placeholder="Password" type="password" aria-label="Password" 
-                                         name="pw"
+                                         name="adminPw"
                                          required>
                                     </div>
 

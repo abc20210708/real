@@ -19,15 +19,10 @@
 
 
 
-                <p id="content">${ad.id}</p>
-                <p>${ad.pw}</p>
-                <p>${ad.name}</p>
-                <p>${ad.address}</p>
-                <p>${ad.pastalCode}</p>
-                <p>${ad.phone}</p>
+                <p id="content">${ad.adminId}</p>
+                <p>${ad.adminPw}</p>
                 <p>${ad.grade}</p>
-                <p>${ad.gender}</p>
-
+              
 
 
             </c:forEach>

@@ -49,7 +49,7 @@
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text"><span class="fas fa-home"></span></span>
                                             </div>
-                                            <input class="form-control" id="exampleInputIcon4" name="id" placeholder="아이디를 입력하세요." type="text">
+                                            <input class="form-control" id="exampleInputIcon4" name="adminId" placeholder="아이디를 입력하세요." type="text">
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -58,7 +58,7 @@
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text"><span class="fas fa-envelope"></span></span>
                                             </div>
-                                            <input class="form-control" id="exampleInputIcon4" name="pw" placeholder="비밀번호를 입력하세요." type="password">
+                                            <input class="form-control" id="exampleInputIcon4" name="adminPw" placeholder="비밀번호를 입력하세요." type="password">
                                         </div>
                                     </div>
                                     <div class="form-group">

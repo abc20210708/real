@@ -7,7 +7,8 @@ import com.example.springpj.user.domain.User;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Service;
-
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
 
@@ -20,18 +21,8 @@ public class AdminService {
 
     //관리자 조회 중간 처리
     public List<Admin> getList() {
-        return adminMapper.getList();
-    }
-
-    //회원 조회 중간 처리
-    public List<User> getUserList() {
-        return adminMapper.getUserList();
-    }
-
-    //AS 조회 중간 처리
-    public List<Request> getRequestList() {
-        log.info("AS 조회 중간 처리");
-        return adminMapper.GetRequestList();
+        log.info("관리자 조회 중간처리!");
+        return adminMapper.getAdminList();
     }
 
     //관리자 등록 중간처리
@@ -47,6 +38,15 @@ public class AdminService {
     }
 
 
+    //회원 조회 중간 처리
+    public List<User> getUserList() {
+        return adminMapper.getUserList();
+    }
 
+    //AS 조회 중간 처리
+    public List<Request> getRequestList() {
+        log.info("AS 조회 중간 처리");
+        return adminMapper.getRequestList();
+    }
 
 }//end class

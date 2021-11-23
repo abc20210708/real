@@ -2,6 +2,7 @@ package com.example.springpj.admin.service;
 
 import com.example.springpj.admin.domain.Admin;
 import com.example.springpj.admin.repository.AdminMapper;
+import com.example.springpj.notice.domain.Notice;
 import com.example.springpj.request.domain.Request;
 import com.example.springpj.user.domain.User;
 import lombok.RequiredArgsConstructor;
@@ -63,6 +64,9 @@ public class AdminService {
     }
 
 
+    public List<Notice> getNotice() {
+        List<Notice> articles = adminMapper.getNotice();
 
-
+        return articles;
+    }
 }//end class

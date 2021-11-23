@@ -123,8 +123,8 @@
                     </ul>
                 </div>
                 <div class="d-flex align-items-center">
-                    <a href="/user/account" class="btn btn-primary text-secondary mr-3"><i class="fas fa-user-plus mr-2"></i> 회원가입</a>
-                    <a href="/login/user" class="btn btn-primary d-none d-md-inline-block"><i class="fas fa-sign-in-alt"></i> 로그인</a>
+                    <!-- <a href="/user/account" class="btn btn-primary text-secondary mr-3"><i class="fas fa-user-plus mr-2"></i> 회원가입</a>
+                    <a href="/login/user" class="btn btn-primary d-none d-md-inline-block"><i class="fas fa-sign-in-alt"></i> 로그인</a> -->
                     <button class="navbar-toggler ml-2" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>

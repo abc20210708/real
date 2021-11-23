@@ -11,9 +11,9 @@
     <!-- // 회원 등록   -->
     <insert id="createUser">
         INSERT INTO cs_user
-        (cs_id, pw, cs_name, address, postal_code, phone, gender)
+        (cs_num, cs_id, pw, cs_name, address, postal_code, phone, gender)
         VALUES
-        (#{id}, #{pw}, #{name}, #{address}, #{postalCode}, #{phone}, #{gender})
+        (seq_cs_user.nextval, #{id}, #{pw}, #{name}, #{address}, #{postalCode}, #{phone}, #{gender})
     </insert>
 
     <!-- 회원 탈퇴  -->

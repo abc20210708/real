@@ -2,6 +2,7 @@ package com.example.springpj.admin.repository;
 
 
 import com.example.springpj.admin.domain.Admin;
+import com.example.springpj.notice.domain.Notice;
 import com.example.springpj.request.domain.Request;
 import com.example.springpj.user.domain.User;
 import org.apache.ibatis.annotations.Mapper;
@@ -32,4 +33,7 @@ public interface AdminMapper {
 
     //AS 목록 상세조회
     Request getRequestContent(Long asNum);
+
+    //공지사항 조회
+    List<Notice> getNotice();
 }//

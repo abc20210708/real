@@ -19,11 +19,11 @@ public class LoginController {
         return "login/login-admin";
     }
 
-    @GetMapping("/user")
+ /*   @GetMapping("/user")
     public String loginUser() {
 
         return "login/login-user";
     }
-
+*/
 
 }//end class

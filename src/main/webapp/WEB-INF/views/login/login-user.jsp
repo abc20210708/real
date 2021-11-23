@@ -53,6 +53,7 @@
                                     <!-- End of Form -->
                                     <div class="form-group">
                                         <!-- Form -->
+                                        <form action="/loginCheck" name="sign-in" method="post" id="signInForm" >
                                         <div class="form-group">
                                             <label for="exampleInputPassword6">비밀번호</label>
                                             <div class="input-group mb-4">
@@ -72,9 +73,9 @@
                                             </div>
                                             <div><a href="#" class="small text-right">계정 정보를 잊어버리셨나요?</a></div>
                                         </div>
-                                    </div>
+
                                     <button type="submit" id="loginBtn" class="btn btn-block btn-primary">로그인</button>
-                                  
+                                </form>
                                    
 
                                 <!-- </form> -->
@@ -102,17 +103,25 @@
                         </div>
                     </div>
                 </div>
+             </div>
             </div>
         </section>
     </main>
 
    <script>
        // 로그인 버튼
-       const $loginBtn = document.getElementById('loginBtn');
+       /*const $loginBtn = document.getElementById('loginBtn');
     
         $loginBtn.onclick = e => {
             location.href = '/user/modify';
-        };
+        };*/
+       const msg = '${msg}';
+       if (msg === 'NO_ID') {
+           alert('회원가입된 아이디가 아닙니다!');
+       } else if (msg === 'NO_PW') {
+           alert('비밀번호가 틀렸습니다!');
+       }
+
    </script>
 
 

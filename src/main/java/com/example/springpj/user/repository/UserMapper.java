@@ -10,18 +10,20 @@ public interface UserMapper {
 
 
 
-    // 유저 회원가입
+    // 회원가입
     boolean createUser(User user);
 
+    // 아이디 중복체크
+    int isDuplicate(String targetKeyword);
 
-    // 유저 탈퇴
+    // 회원탈퇴
     boolean deleteUser(String id, String pw);
 
-    //회원 수정하기
+    // 회원 수정하기
     boolean updateUser(ModUser user);
 
-    //회원 정보 받기
-    User getUser();
+    //단일 회원 정보 조회 기능
+    User getUser(String account);
 
 
 

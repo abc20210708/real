@@ -1,14 +1,13 @@
 package com.example.springpj.user.domain;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
 @Getter @Setter @ToString
+@AllArgsConstructor
+@Builder
 
 public class User {
 
@@ -21,6 +20,7 @@ public class User {
     private int grade;
     private String gender;
     private Long csNum;
+    private Auth auth;
 
     private static long seq2;
 

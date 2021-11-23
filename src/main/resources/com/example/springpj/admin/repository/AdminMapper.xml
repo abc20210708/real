@@ -67,6 +67,15 @@
         SELECT * FROM as_apply WHERE as_num = #{asNum}
     </select>
 
+    <resultMap id="noticeMap" type="com.example.springpj.notice.domain.Notice">
+        <result property="writer" column="admin_id" />
+        <result property="regDate" column="reg_date" />
+    </resultMap>
+    <!-- 공지사항 목록 조회   -->
+    <select id="getNotice" resultMap="noticeMap">
+        SELECT * FROM notice
+    </select>
+
 
 </mapper>
 

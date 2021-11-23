@@ -18,5 +18,17 @@ public class MainController {
         return "main/index";
     }
 
+    @GetMapping("/news")
+    public String news() {
+        log.info("/menu/news");
+        return "menu/news";
+    }
+
+    @GetMapping("/map")
+    public String map() {
+        log.info("/menu/map");
+        return "menu/map";
+    }
+
 
 }

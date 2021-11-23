@@ -81,7 +81,7 @@ public class AdminController {
     //admin/user/content?csNum=3
     @GetMapping("/request/content")
     public String requestContent(Long asNum, Model model) {
-        log.info("회원 상세 목록 조회!! GET!!" + asNum);
+        log.info("AS 상세 목록 조회!! GET!!" + asNum);
         Request request =  adminService.getRequestContent(asNum);
         model.addAttribute("req",request);
         return "admin/request-content";

@@ -25,7 +25,7 @@
         <nav id="navbar-main" aria-label="Primary navigation"
             class="navbar navbar-main navbar-expand-lg navbar-theme-primary headroom navbar-light navbar-transparent navbar-theme-primary">
             <div class="container position-relative">
-                <a class="navbar-brand shadow-soft py-2 px-3 rounded border border-light mr-lg-4" href="./index.html">
+                <a class="navbar-brand shadow-soft py-2 px-3 rounded border border-light mr-lg-4" href="/user/modify">
                     <img class="navbar-brand-dark" src="/img/italic(blue).png" alt="Logo light">
                     <img class="navbar-brand-light" src="/img/italic(blue).png" alt="Logo dark">
                 </a>
@@ -47,7 +47,7 @@
                     </div>
                     <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
                         <li class="nav-item dropdown">
-                            <a href="#" class="nav-link" data-toggle="dropdown">
+                            <a href="/request/request" id="asBtn" class="nav-link" data-toggle="dropdown">
                                 <span class="nav-link-inner-text">A/S신청</span>
                             </a>
                         </li>
@@ -131,7 +131,7 @@
                 <div class="d-flex align-items-center">
                     <a href="#" class="btn btn-primary text-secondary mr-3" data-toggle="modal"
                         data-target="#modal-form-signup"><i class="fas fa-user-edit mr-2"></i> 내정보</a>
-                    <a href="#" class="btn btn-primary d-none d-md-inline-block"><i class="fas fa-sign-in-alt"></i>
+                    <a href="/main/index" class="btn btn-primary d-none d-md-inline-block"><i class="fas fa-sign-in-alt"></i>
                         로그아웃</a>
                 </div>
             </div>
@@ -237,8 +237,8 @@
                         <h1 class="display-2 mb-4">We are ISEC A/S</h1>
                         <p class="lead">직접 해결하는 방법을 알려드리고 서비스 및 제품에 대한 궁금증을 상담해드립니다.</p>
                         <p class="lead mb-5">제품별 사용설명서 및 관리에 대한 팁을 알려드리고 제품 고장시 출장/방문 예약부터 부품교체 및 하자 수리까지 도와드립니다.</p>
-                        <a class="btn text-secondary btn-primary" href="#"><span
-                                class="fas fa-tools text-secondary mr-2"></span>A/S 신청</a>
+                        <a href="/request/request" class="btn text-secondary btn-primary" ><span
+                             id="asBtn"   class="fas fa-tools text-secondary mr-2"></span>A/S 신청</a>
                     </div>
                 </div>
             </div>
@@ -505,7 +505,12 @@
     <script src="/js/neumorphism.js"></script>
 
     <script>
-      
+         //목록버튼
+        const $asBtn = document.getElementById('asBtn');
+
+        $asBtn.onclick = e => {
+            location.href = '/request/request';
+        };
     </script>
 </body>
 

@@ -33,7 +33,7 @@ public class RequestController {
     public String write(Request request) {
         log.info("AS 신청 요청! ==> POST!" + request);
         requestService.write(request);
-        return  "redirect:/main/index";
+        return  "redirect:/user/modify";
     }
 
 

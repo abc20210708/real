@@ -28,7 +28,7 @@
     <header class="header-global">
         <nav id="navbar-main" aria-label="Primary navigation" class="navbar navbar-main navbar-expand-lg navbar-theme-primary headroom navbar-light navbar-transparent navbar-theme-primary">
             <div class="container position-relative">
-                <a class="navbar-brand shadow-soft py-2 px-3 rounded border border-light mr-lg-4" href="./index.html">
+                <a class="navbar-brand shadow-soft py-2 px-3 rounded border border-light mr-lg-4" href="/main/index">
                     <img class="navbar-brand-dark" src="/img/italic(blue).png" alt="Logo light">
                     <img class="navbar-brand-light" src="/img/italic(blue).png" alt="Logo dark">
                 </a>
@@ -389,13 +389,13 @@
     const $asBtn = document.getElementById('asBtn');
 
     $asBtn.onclick = e => {
-        location.href = '/request/request';
+        location.href = '/login/user';
     };
 
     const $asBtn2 = document.getElementById('asBtn2');
 
     $asBtn2.onclick = e => {
-        location.href = '/request/request';
+        location.href = '/login/user';
     };
     </script>
 

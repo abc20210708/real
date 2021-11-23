@@ -39,7 +39,7 @@
     </resultMap>
 
     <select id="getUser" resultMap="userMap">
-        SELECT * FROM cs_user WHERE cs_num=5
+        SELECT * FROM cs_user WHERE cs_num=12
     </select>
 
 

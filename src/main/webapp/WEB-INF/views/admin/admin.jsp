@@ -29,7 +29,7 @@
     <header class="header-global">
         <nav id="navbar-main" aria-label="Primary navigation" class="navbar navbar-main navbar-expand-lg navbar-theme-primary headroom navbar-light navbar-transparent navbar-theme-primary">
             <div class="container position-relative">
-                <a class="navbar-brand shadow-soft py-2 px-3 rounded border border-light mr-lg-4" href="/main/index">
+                <a class="navbar-brand shadow-soft py-2 px-3 rounded border border-light mr-lg-4" href="/user/modify">
                     <img class="navbar-brand-dark" src="/img/italic(blue).png" alt="Logo light">
                     <img class="navbar-brand-light" src="/img/italic(blue).png" alt="Logo dark">
                 </a>
@@ -140,7 +140,7 @@
                 <!-- Title -->
                 <div class="row">
                     <div class="col text-center">
-                        <h2 class="h5 mb-5">???관리자님 환영합니다.</h2>
+                        <h2 class="h5 mb-5">관리자님 환영합니다.</h2>
                     </div>
                 </div>
                 <!-- End of title-->
@@ -203,7 +203,7 @@
                                                     <th scope="col">${req.asChoice}</th>
                                                     <th scope="col">${req.asDate}</th> 
                                             </tr>
-                                        </c:forEach>
+                                            </c:forEach>
                                         </table>
                                     </div>
                                     <div class="tab-pane fade" id="tabs-text-3" role="tabpanel" aria-labelledby="tabs-text-3-tab">

@@ -189,10 +189,7 @@
                             </form>
                             
                             <div class="card-footer px-0 mx-auto row">
-                                
-                                <div class="col-md-4">
-                                    <button type="button" id="listBtn" class="btn btn-primary text-info">목록</button>
-                                </div>
+                                <button type="button" id="listBtn" class="btn btn-primary btn-block text-info px-5">A/S 목록</button>
                             </div>
                         </div>
                         <!-- End of Contact Card -->

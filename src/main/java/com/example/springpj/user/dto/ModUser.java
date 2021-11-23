@@ -14,11 +14,11 @@ import java.sql.SQLException;
 
 public class ModUser {
 
-
+    private String pw;
     private String address;
     private int postalCode;
     private String phone;
-    private Long csNum;
+    private int csNum;
 
 
     /*public ModUser(ResultSet rs) throws SQLException {

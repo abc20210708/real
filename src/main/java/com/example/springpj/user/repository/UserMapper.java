@@ -18,7 +18,10 @@ public interface UserMapper {
     boolean deleteUser(String id, String pw);
 
     //회원 수정하기
-    boolean update(ModUser user);
+    boolean updateUser(ModUser user);
+
+    //회원 정보 받기
+    User getUser();
 
 
 

@@ -111,7 +111,7 @@
        const $loginBtn = document.getElementById('loginBtn');
     
         $loginBtn.onclick = e => {
-            location.href = '/admin/user/content?csNum=5';
+            location.href = '/user/modify';
         };
    </script>
 

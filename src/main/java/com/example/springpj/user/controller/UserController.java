@@ -52,22 +52,27 @@ public class UserController {
         return "redirect:/main/index";
     }
 
-    //회원- 회원 정보 상세 보기
 
-    //수정 화면 요청
-    @GetMapping("/modify?csNum=5")
-    public String modify() {
+
+    //회원의 정보 상세 보기
+    @GetMapping("/modify")
+    public String content(Model model) {
+        User user5 = userService.getUser();
+        model.addAttribute("u",user5);
         log.info("수정 화면 요청!");
-        return "redirect:/user/content?csNum=" + 5;
+        log.info(user5);
+
+        return "user/modify";
     }
 
-
-    //수정 요청 처리
     @PostMapping("/modify")
-    public String modify(ModUser user) {
-        log.info("/board/modify POST! - " + user);
-        userService.update(user);
-        return "redirect:/user/content?csNum=" + 5;
+    public String content(Model model, ModUser user) {
+        User user5 = userService.getUser();
+        model.addAttribute("u",user5);
+        log.info("수정 요청!");
+        userService.updateUser(user);
+        log.info(user);
+        return "redirect:/user/modify";
     }
 
 

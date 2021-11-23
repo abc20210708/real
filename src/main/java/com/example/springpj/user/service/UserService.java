@@ -29,9 +29,14 @@ public class UserService {
     }
 
     //회원 수정 처리
-    public boolean update(ModUser user) {
-        userMapper.update(user);
+    public boolean updateUser(ModUser user) {
+        userMapper.updateUser(user);
         return true;
+    }
+
+    //회원 정보 받기
+    public User getUser() {
+       return  userMapper.getUser();
     }
     
 

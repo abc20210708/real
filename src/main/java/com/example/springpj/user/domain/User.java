@@ -31,7 +31,7 @@ public class User {
     public User(String id, String pw, String name,
                 String address, int postalCode,
                 String  phone, int grade, String gender
-                    , Long csNum) {
+                    , long csNum) {
         this.id = id;
         this.pw = pw;
         this.name = name;

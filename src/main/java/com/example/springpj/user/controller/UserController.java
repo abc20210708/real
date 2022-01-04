@@ -70,7 +70,6 @@ public class UserController {
         return "login/login-user";
     }
 
-
     //로그인 검증
     @PostMapping("/loginCheck")
     public String loginCheck(String account, String password, Model model, HttpSession session) {
